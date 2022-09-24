@@ -1,9 +1,9 @@
 # RPi-ocr
 
-"Reading Pen for the Visually Impaired" was a Raspberry Pi student project. The product chains the input from a camera source through OCR and TTS software to sound output.
+"Reading Pen for the Visually Impaired" was a Raspberry Pi student project. The product chains inputs from a camera source through OCR and TTS software to sound outputs.
 
 ## Materials Needed
-* A Raspberry Pi 3/4, with peripherals (monitor, keyboard, mouse, and all the cables) to display and configure the Pi
+* A Raspberry Pi computer, with peripherals (monitor, keyboard, mouse, and all the cables) to display and configure the Raspberry Pi
 * A Raspberry Pi Camera Module
 * A Button that does not have "rebounce issue" (the main cause for the program to mistake single-clicks with double-clicks)
 
@@ -20,10 +20,11 @@ In addition, connect and test the camera and the button.
 
 ![Product Image](/demo.png)
 
-## Project Descriptor
+## Project Description
 The project is done using Python, for a large part using `os.system()` to run command line sequences.
 
 The /src folder contains the project source. This is how the product works:
+
 0. Run `main.py`. It should start listening to the button.
 1. When a single-click on the button is received, the Raspberry Pi captures an image after 1 second. Image is stored as `latest.png`.
 2. The image is then passed to Tesseract which performs OCR. The resulting text is stored as `latest.txt`.
@@ -46,3 +47,4 @@ These are some software improvements that I did not have the time to figure out:
 * Tesseract documentation - https://tesseract-ocr.github.io/tessdoc/
 * ESpeak documentation - https://espeak.sourceforge.net/docindex.html
 * OpenCV image processing tutorial - https://docs.opencv.org/4.x/d2/d96/tutorial_py_table_of_contents_imgproc.html
+* Detailed guide on using buttons on a Raspberry Pi: https://raspberrypihq.com/use-a-push-button-with-raspberry-pi-gpio/
